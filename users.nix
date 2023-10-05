@@ -23,7 +23,7 @@
 
   users.users.subsystem = {
     isNormalUser = true;
-    description = "l";
+    description = "subsystem";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       firefox
