@@ -1,0 +1,15 @@
+# This is a generated file.  Do not edit!
+#
+# To make changes, edit the fileSystems and swapDevices NixOS options
+# in your /etc/nixos/configuration.nix file.
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+
+# Filesystems.
+/dev/disk/by-uuid/69314942-fc81-4923-b311-d55af6c6d995 / ext4 x-initrd.mount 0 1
+/dev/disk/by-uuid/D5EA-4D39 /boot vfat defaults 0 2
+UUID=4AA6B6CDA6B6B931 /media/gamedisk lowntfs-3g uid=1000,gid=1000,rw,user,exec,umask=000 0 0
+UUID=8096CE6696CE5BF2 /media/shared2 lowntfs-3g uid=1000,gid=1000,rw,user,exec,umask=000 0 0
+
+# Swap devices.
+
