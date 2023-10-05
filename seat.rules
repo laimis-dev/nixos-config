@@ -1,0 +1,5 @@
+SUBSYSTEM=="drm", KERNEL=="card0", TAG+="seat", TAG+="master-of-seat", ENV{ID_SEAT}="seat1"
+SUBSYSTEM=="sound", KERNEL=="card0", TAG+="seat", TAG+="master-of-seat", ENV{ID_SEAT}="seat1"
+SUBSYSTEM=="usb", KERNEL=="usb1/1-1/1-1.1", TAG+="seat", TAG+="master-of-seat", ENV{ID_SEAT}="seat1"
+SUBSYSTEM=="usb", KERNEL=="usb1/1-1/1-1.2", TAG+="seat", TAG+="master-of-seat", ENV{ID_SEAT}="seat1"
+
