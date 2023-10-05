@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./nvidia.nix
+      ./users.nix
     ];
 
   # Bootloader.
@@ -67,33 +68,10 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.l = {
-    isNormalUser = true;
-    description = "l";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      firefox
-      kate
-      steam
-      discord
-      lshw
-      ntfs3g
-      mangohud
-      goverlay
-      gh
-      git
-    ];
-  };
-
-  # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
      vim
-  #  wget
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
