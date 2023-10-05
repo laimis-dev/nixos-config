@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ./nvidia.nix
       ./users.nix
+      ./filesystems.nix
     ];
 
   # Bootloader.
@@ -101,17 +102,6 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.05"; # Did you read the comment?
   hardware.bluetooth.enable = true;  
-  fileSystems."/media/gamedisk" =
-    { device = "/dev/disk/by-uuid/4AA6B6CDA6B6B931";
-      fsType = "ntfs-3g";
-      options = [ "gid=1000" "uid=1000" ];
-    };
-
-  fileSystems."/media/shared2" =
-    { device = "/dev/disk/by-uuid/8096CE6696CE5BF2";
-      fsType = "ntfs-3g";
-      options = [ "gid=1000" "uid=1000" ];
-    };
 
   services.power-profiles-daemon.enable = false;
   services.auto-cpufreq.enable = true;
