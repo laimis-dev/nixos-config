@@ -1,7 +1,11 @@
-{ ... }:
+{ lib, ... }:
 
+let
+  isMultiseatEnabled = true;
+in
 {
-  services.udev.extraRules = builtins.readFile "/etc/nixos/seat.rules";
-
+  services.udev = lib.optionalAttrs isMultiseatEnabled {
+    extraRules = builtins.readFile "/etc/nixos/seat.rules";
+  };
 }
 

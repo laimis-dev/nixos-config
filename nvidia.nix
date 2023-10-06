@@ -7,7 +7,7 @@
     driSupport = true;
     driSupport32Bit = true;
   };
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = ["nvidia" "amdgpu"];
 
   hardware.nvidia = {
     modesetting.enable = true;
