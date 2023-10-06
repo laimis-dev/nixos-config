@@ -107,4 +107,10 @@
     };
   };
   boot.kernelPackages = pkgs.linuxPackages_zen;
+  boot.kernelParams = [
+    "initcall_blacklist=acpi_cpufreq_init"
+    "amd_pstate.shared_mem=1"
+  ];
+  boot.kernelModules = ["amd-pstate"];
+
 }
