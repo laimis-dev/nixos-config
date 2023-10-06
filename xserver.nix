@@ -1,4 +1,4 @@
-{ services, ... }:
+{ services, pkgs, ... }:
 
 {
   # Enable the KDE Plasma Desktop Environment.
@@ -17,6 +17,6 @@
       xterm.enable = false;
       xfce.enable = true;
     };
-    displayManager.defaultSession = "xfce";
+    displayManager.defaultSession = "xfce";    
   };
 }

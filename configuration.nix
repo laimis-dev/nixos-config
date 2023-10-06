@@ -13,6 +13,7 @@
       ./filesystems.nix
       ./xserver.nix
       ./multiseat.nix
+      ./cpu.nix
     ];
 
   # Bootloader.
@@ -63,6 +64,7 @@
 
   environment.systemPackages = with pkgs; [
      vim
+     xfce.xfce4-whiskermenu-plugin
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -92,25 +94,4 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.05"; # Did you read the comment?
   hardware.bluetooth.enable = true;  
-
-  services.power-profiles-daemon.enable = false;
-  services.auto-cpufreq.enable = true;
-  services.auto-cpufreq.settings = {
-    charger = {
-      governor = "performance";
-      turbo = "auto";
-    };
-
-    battery = {
-      governor = "powersave";
-      turbo = "auto";
-    };
-  };
-  boot.kernelPackages = pkgs.linuxPackages_zen;
-  boot.kernelParams = [
-    "initcall_blacklist=acpi_cpufreq_init"
-    "amd_pstate.shared_mem=1"
-  ];
-  boot.kernelModules = ["amd-pstate"];
-
 }
