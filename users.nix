@@ -18,6 +18,7 @@
       git
       lazygit
       neovim
+      ncdu # folder disk space usage
     ];
   };
 
