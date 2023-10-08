@@ -64,7 +64,8 @@
 
   environment.systemPackages = with pkgs; [
      vim
-     xfce.xfce4-whiskermenu-plugin
+     # xfce.xfce4-whiskermenu-plugin
+     pulseaudio
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

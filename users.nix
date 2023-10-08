@@ -19,6 +19,8 @@
       lazygit
       neovim
       ncdu # folder disk space usage
+      vlc
+      pavucontrol
     ];
   };
 
