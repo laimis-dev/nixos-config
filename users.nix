@@ -21,8 +21,20 @@
       ncdu # folder disk space usage
       vlc
       pavucontrol
+      qbittorrent
     ];
   };
+
+  nixpkgs.overlays = [
+    (self: super: {
+      proton-ge = self.callPackage ./games/proton-ge.nix {};
+    })
+  ];
+
+  system.activationScripts.proton-ge.text = ''
+    mkdir -p /home/l/.steam/root/compatibilitytools.d/
+    ln -sf ${pkgs.proton-ge}/share/proton-ge /home/l/.steam/root/compatibilitytools.d/GE-Proton8-16
+  ''; 
 
   users.users.subsystem = {
     isNormalUser = true;

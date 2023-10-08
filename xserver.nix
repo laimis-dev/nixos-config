@@ -1,22 +1,20 @@
 { services, pkgs, ... }:
 
 {
-  # Enable the KDE Plasma Desktop Environment.
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
-
-  # Configure keymap in X11
-  services.xserver = {
-    layout = "us";
-    xkbVariant = "";
-  };
-  
   services.xserver = {
     enable = true;
-#    desktopManager = {
-#      xterm.enable = false;
-#      xfce.enable = true;
-#    };
-#    displayManager.defaultSession = "xfce";    
+    layout = "us";
+    xkbVariant = "";
+    desktopManager = {
+# xfce
+#       xterm.enable = false;
+#       xfce.enable = true;
+#       defaultSession = "xfce";   
+        plasma5.enable = true;
+    };
+
+    displayManager = {
+       sddm.enable = true; 
+    };
   };
 }
