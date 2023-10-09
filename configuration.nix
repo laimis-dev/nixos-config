@@ -66,6 +66,8 @@
      vim
      # xfce.xfce4-whiskermenu-plugin
      pulseaudio
+     alsa-tools
+     psmisc
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
