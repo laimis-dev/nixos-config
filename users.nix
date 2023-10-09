@@ -22,6 +22,8 @@
       vlc
       pavucontrol
       qbittorrent
+      isoimagewriter
+      spotify
     ];
   };
 
