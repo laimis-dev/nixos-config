@@ -14,6 +14,7 @@
       ./xserver.nix
       ./multiseat.nix
       ./cpu.nix
+      ./environment.nix
     ];
 
   # Bootloader.

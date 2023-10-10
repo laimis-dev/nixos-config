@@ -33,6 +33,9 @@
       # dayz
       geoip
       whois
+      #--
+      docker
+      nerdfonts
     ];
   };
 
