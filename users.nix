@@ -24,6 +24,15 @@
       qbittorrent
       isoimagewriter
       spotify
+      nodejs
+      wine
+      winetricks
+      lutris
+      gamemode
+      steamPackages.steamcmd
+      # dayz
+      geoip
+      whois
     ];
   };
 
