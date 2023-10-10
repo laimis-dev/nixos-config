@@ -36,6 +36,7 @@
       #--
       docker
       nerdfonts
+      ripgrep
     ];
   };
 
