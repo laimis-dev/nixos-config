@@ -40,7 +40,13 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-
+  services.supergfxd.enable = true;
+  services = {
+    asusd = {
+      enable = true;
+      enableUserService = true;
+    };
+  };
   # Enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;

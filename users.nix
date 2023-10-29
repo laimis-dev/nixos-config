@@ -26,6 +26,7 @@
       spotify
       nodejs
       wine
+      wine64
       winetricks
       lutris
       gamemode
@@ -37,6 +38,24 @@
       docker
       nerdfonts
       ripgrep
+      xclip 
+      neofetch
+      vscodium
+      gnused
+      gnugrep
+      sqlite
+      xdg-utils
+      coreutils
+      findutils
+      steamtinkerlaunch
+      ryujinx
+      yuzu
+      unrar
+      hplip
+      wget
+      gnupg1orig
+      apparmor-utils
+      partition-manager
     ];
   };
 
