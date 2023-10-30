@@ -14,7 +14,9 @@
     };
 
     displayManager = {
-       sddm.enable = true; 
+       # sddm.enable = true; 
+       # ly.enable = true; 
+       lightdm.enable = true; 
     };
   };
 }
