@@ -15,6 +15,7 @@
       ./multiseat.nix
       ./cpu.nix
       ./environment.nix
+#      ./vfio.nix
     ];
 
   # Bootloader.

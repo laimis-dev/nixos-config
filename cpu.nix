@@ -14,7 +14,10 @@
 #      turbo = "auto";
 #    };
 #  };
-  boot.kernelPackages = pkgs.linuxPackages_zen;
+
+  # boot.kernelPackages = pkgs.linuxPackages_zen;
+  # boot.kernelPackages = pkgs.linuxPackages_latest;
+  
   boot.kernelParams = [
     "initcall_blacklist=acpi_cpufreq_init"
   ];
