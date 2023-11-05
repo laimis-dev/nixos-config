@@ -1,6 +1,15 @@
-{ pkgs, services, ... }:
+{ pkgs, services, environment, ... }:
 
 {
+
+  environment.systemPackages = with pkgs; [
+     vim
+     # xfce.xfce4-whiskermenu-plugin
+     pulseaudio
+     alsa-tools
+     psmisc
+  ];
+
   services.flatpak.enable = true; 
   users.users.l = {
     isNormalUser = true;
@@ -61,7 +70,6 @@
       btop
       pciutils
       virtmanager
-      via
     ];
   };
 

@@ -1,35 +1,48 @@
 { services, pkgs, ... }:
 
 {
+  # xfce
+  # xdg.portal.enable = true;
+  # xdg.portal.extraPortals = with pkgs; [
+  #   xdg-desktop-portal-gtk
+  # ];
+
   services.xserver = {
     enable = true;
     layout = "us";
     xkbVariant = "";
     desktopManager = {
-# xfce
-      # xterm.enable = true;
-     # xfce.enable = true;
-#       defaultSession = "xfce";   
-        plasma5.enable = true;
+     xterm.enable = false;
+    # xfce = {
+    #   enable = true;
+    #   noDesktop = true;
+    #   enableXfwm = false;
+    # };
+     # plasma5 = {
+     #    enable = true;
+     # };
+     lxqt = {
+        enable = true;
+     };
     };
 
     windowManager = {
        i3 = {
           enable = true;
-          extraPackages = with pkgs; [
-            dmenu #application launcher most people use
-            i3status # gives you the default i3 status bar
-            i3lock #default i3 screen locker
-            i3blocks #if you are planning on using i3blocks over i3status
-         ];
+          configFile = /etc/nixos/i3-config;
+         #  extraPackages = with pkgs; [
+         #    dmenu 
+         #    i3status
+         #    i3lock
+         #    i3blocks #if you are planning on using i3blocks over i3status
+         # ];
        };
     };
     
 
     displayManager = {
        # sddm.enable = true; 
-       # ly.enable = true; 
-       lightdm.enable = true; 
+      lightdm.enable = true; 
     };
   };
 }
