@@ -70,6 +70,9 @@
       btop
       pciutils
       virtmanager
+      nitrogen
+      alacritty
+      rofi
     ];
   };
 
