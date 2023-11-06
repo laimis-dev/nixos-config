@@ -14,7 +14,7 @@
   users.users.l = {
     isNormalUser = true;
     description = "l";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
       firefox
       kate
@@ -46,6 +46,7 @@
       whois
       #--
       docker
+      lazydocker
       nerdfonts
       ripgrep
       xclip 
@@ -73,15 +74,24 @@
       nitrogen
       alacritty
       rofi
+      python312
+      bluetuith
+      arandr
+      autorandr
     ];
   };
 
-  virtualisation.libvirtd = {
-    enable = true;
-    qemuOvmf = true;
-    qemuRunAsRoot = false;
-    onBoot = "ignore";
-    onShutdown = "shutdown";
+  virtualisation = {
+    docker = {
+      enable = true;
+    };
+    libvirtd = {
+      enable = true;
+      qemuOvmf = true;
+      qemuRunAsRoot = false;
+      onBoot = "ignore";
+      onShutdown = "shutdown";
+    };
   };
 
   nixpkgs.overlays = [
