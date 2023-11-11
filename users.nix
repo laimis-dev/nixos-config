@@ -78,6 +78,8 @@
       bluetuith
       arandr
       autorandr
+      tuifimanager
+      ranger
     ];
   };
 

@@ -6,6 +6,7 @@
     description = "autostart display configuration with autorandr";
     script = ''
       autorandr --change
+      rofi -modes "combi" -show combi
     '';
     wantedBy = [ "default.target" ];
   };
