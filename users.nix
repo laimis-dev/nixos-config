@@ -62,7 +62,6 @@
       ryujinx
       # yuzu-mainline
       yuzu-early-access
-      unrar
       hplip
       wget
       gnupg1orig
@@ -71,15 +70,7 @@
       btop
       pciutils
       virtmanager
-      nitrogen
-      alacritty
-      rofi
       python312
-      bluetuith
-      arandr
-      autorandr
-      tuifimanager
-      ranger
     ];
   };
 

@@ -16,6 +16,7 @@
       ./cpu.nix
       ./environment.nix
       ./autostart.nix
+      ./packages
 #      ./vfio.nix
     ];
 
