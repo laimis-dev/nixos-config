@@ -8,10 +8,12 @@
         configFile = /etc/nixos/packages/i3-config;
         extraPackages = with pkgs; [
           i3lock
-          i3status
+          polybar
         ];
      };
   };
+
+  services.picom.enable = true;
 
   users.users.l.packages = with pkgs; [
     nitrogen

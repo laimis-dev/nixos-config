@@ -1,0 +1,1 @@
+/home/l/.config/home-manager/home.nix

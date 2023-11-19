@@ -1,7 +1,8 @@
-{ pkgs, services, environment, ... }:
+{ pkgs, services, environment, xdg, ... }:
 
 {
-
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   environment.systemPackages = with pkgs; [
      vim
      # xfce.xfce4-whiskermenu-plugin
@@ -71,6 +72,9 @@
       pciutils
       virtmanager
       python312
+      libsForQt5.ark
+      unrar
+      xfce.xfce4-power-manager
     ];
   };
 

@@ -5,8 +5,20 @@
 # this file and re-run i3-config-wizard(1).
 #
 #
+#
+#
+# startup 
+exec --no-startup-id nitrogen --restore 
+exec --no-startup-id autorandr --change 
+exec --no-startup-id polybar
+exec --no-startup-id picom -CGd
+#
 # launch rofi
 bindsym $mod+d exec --no-startup-id rofi -modes "combi" -show combi
+
+# remove window title bar
+default_border pixel 1
+default_floating_border pixel 1
 
 #keyboard lang
 exec "setxkbmap -layout us,lt"
@@ -193,8 +205,9 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        status_command i3status
-}
+# # Start i3bar to display a workspace bar (plus the system information i3status
+# # finds out, if available)
+# bar {
+#         status_command i3status
+# }
+ 
