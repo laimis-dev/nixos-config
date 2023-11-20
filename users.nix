@@ -74,7 +74,6 @@
       python312
       libsForQt5.ark
       unrar
-      xfce.xfce4-power-manager
     ];
   };
 
