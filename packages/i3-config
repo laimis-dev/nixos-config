@@ -28,9 +28,9 @@ exec "setxkbmap -option 'grp:win_space_toggle'"
 bindsym $mod+Ctrl+greater move workspace to output right
 bindsym $mod+Ctrl+less move workspace to output l
 
-# i3 config file (v4)
-#
-# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+# setting brightness
+bindsym F7 exec brightnessctl s 25- 
+bindsym F8 exec brightnessctl s +25
 
 set $mod Mod4
 

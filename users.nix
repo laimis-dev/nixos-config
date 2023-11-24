@@ -74,6 +74,7 @@
       python312
       libsForQt5.ark
       unrar
+      brightnessctl
     ];
   };
 
