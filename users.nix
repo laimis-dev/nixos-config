@@ -78,17 +78,25 @@
     ];
   };
 
+  fonts.fonts = with pkgs; [
+    scientifica
+    nerdfonts
+    iosevka
+    jetbrains-mono
+  ];
+
   virtualisation = {
     docker = {
       enable = true;
+      enableOnBoot = false;
     };
-    libvirtd = {
-      enable = true;
-      qemuOvmf = true;
-      qemuRunAsRoot = false;
-      onBoot = "ignore";
-      onShutdown = "shutdown";
-    };
+    # libvirtd = {
+    #   enable = true;
+    #   qemuOvmf = true;
+    #   qemuRunAsRoot = false;
+    #   onBoot = "ignore";
+    #   onShutdown = "shutdown";
+    # };
   };
 
   nixpkgs.overlays = [

@@ -12,6 +12,7 @@ exec --no-startup-id nitrogen --restore
 exec --no-startup-id xrandr --output DP-0 --rate 144 --primary --mode 3440x1440 --pos 1920x0 --rotate normal --output DP-1 --off --output eDP-1-0 --mode 1920x1080 --pos 0x360 --rotate normal --output HDMI-A-1-0 --off
 exec --no-startup-id polybar
 exec --no-startup-id picom -CGd
+
 #
 # launch rofi
 bindsym $mod+d exec --no-startup-id rofi -modes "combi" -show combi
