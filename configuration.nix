@@ -71,7 +71,22 @@
   # services.xserver.libinput.enable = true;
 
   nixpkgs.config.allowUnfree = true;
+  systemd.services.asus-audio = {
+    wantedBy = [ "multi-user.target" ];
+    before = [ "multi-user.target" ];
 
+    script = ''
+      (
+        echo 0x18 0x90a60160
+        echo 0x19 0x03a19020
+      )>/sys/class/sound/hwC2D0/user_pin_configs
+      echo 1 > /sys/class/sound/hwC2D0/reconfig
+    '';
+    serviceConfig = {
+      Type = "oneshot";
+      Restart = "on-failure";
+    };
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
