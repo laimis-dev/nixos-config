@@ -75,8 +75,10 @@
       libsForQt5.ark
       unrar
       brightnessctl
+      openvpn3
     ];
   };
+  programs.openvpn3.enable = true;
 
   fonts.fonts = with pkgs; [
     scientifica
