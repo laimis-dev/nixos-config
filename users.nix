@@ -76,6 +76,7 @@
       unrar
       brightnessctl
       openvpn3
+      maim
     ];
   };
   programs.openvpn3.enable = true;

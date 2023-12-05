@@ -17,6 +17,10 @@ exec --no-startup-id picom -CGd
 # launch rofi
 bindsym $mod+d exec --no-startup-id rofi -modes "combi" -show combi
 
+# print screen
+bindsym Print exec --no-startup-id maim --select $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+bindsym $mod+Print exec --no-startup-id maim --select $(xdotool getactivewindow) "/home/$USER/Pictures/$(date)"
+
 # remove window title bar
 default_border pixel 1
 default_floating_border pixel 1
