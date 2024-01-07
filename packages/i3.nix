@@ -13,7 +13,7 @@
      };
   };
 
-  services.picom.enable = true;
+  services.picom.enable = false;
 
   users.users.l.packages = with pkgs; [
     nitrogen

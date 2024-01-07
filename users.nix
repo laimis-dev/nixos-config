@@ -74,9 +74,17 @@
       python312
       libsForQt5.ark
       unrar
+      unzip
       brightnessctl
       openvpn3
       maim
+      jetbrains.phpstorm
+      postman
+      obs-studio
+      appimage-run
+      chromium
+      vkbasalt
+      qjackctl
     ];
   };
   programs.openvpn3.enable = true;
