@@ -9,7 +9,7 @@
 #
 # startup 
 exec --no-startup-id nitrogen --restore 
-# exec --no-startup-id xrandr --output DP-0 --rate 144 --primary --mode 3440x1440 --pos 1920x0 --rotate normal --output DP-1 --off --output eDP-1-0 --mode 1920x1080 --pos 0x360 --rotate normal --output HDMI-A-1-0 --off
+exec --no-startup-id xrandr --output DP-0 --rate 144 --primary --mode 3440x1440 --pos 1920x0 --rotate normal --output DP-1 --off --output eDP-1-0 --mode 1920x1080 --pos 0x360 --rotate normal --output HDMI-A-1-0 --off
 exec --no-startup-id /etc/nixos/packages/polybar/start.sh 
 # exec --no-startup-id picom -CGd
 # exec --no-startup-id xinput set-prop 12 "libinput Middle Emulation Enabled" 0
@@ -28,16 +28,16 @@ default_border pixel 1
 default_floating_border pixel 1
 
 #keyboard lang
-# exec "setxkbmap -layout us,lt"
-# exec "setxkbmap -option 'grp:win_space_toggle'"
+exec "setxkbmap -layout us,lt"
+exec "setxkbmap -option 'grp:win_space_toggle'"
 
 # move focused workspace between monitors
 bindsym $mod+Ctrl+greater move workspace to output right
 bindsym $mod+Ctrl+less move workspace to output l
 
 # setting brightness
-# bindsym F7 exec brightnessctl s 25- 
-# bindsym F8 exec brightnessctl s +25
+bindsym F7 exec brightnessctl s 25- 
+bindsym F8 exec brightnessctl s +25
 
 set $mod Mod4
 
