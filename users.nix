@@ -1,12 +1,11 @@
 { pkgs, services, environment, xdg, ... }:
 
 {
-  xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  # xdg.portal.enable = true;
+  # xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   environment.systemPackages = with pkgs; [
      vim
      # xfce.xfce4-whiskermenu-plugin
-     pulseaudio
      alsa-tools
      psmisc
   ];
@@ -70,7 +69,7 @@
       gparted
       btop
       pciutils
-      virtmanager
+      virt-manager
       python312
       libsForQt5.ark
       unrar
@@ -79,12 +78,16 @@
       openvpn3
       maim
       jetbrains.phpstorm
-      postman
+      # postman
       obs-studio
       appimage-run
       chromium
       vkbasalt
-      qjackctl
+      wireplumber
+      easyeffects
+      gnumake
+      docker-compose
+      jetbrains.pycharm-community
     ];
   };
   programs.openvpn3.enable = true;
