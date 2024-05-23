@@ -11,7 +11,8 @@
     };
    
     displayManager = {
-      lightdm.enable = true; 
+      lightdm.enable = true;
+      # gdm.enable = true; 
     };
   };
 }

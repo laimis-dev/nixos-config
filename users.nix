@@ -88,6 +88,7 @@
       gnumake
       docker-compose
       jetbrains.pycharm-community
+      gnomeExtensions.pop-shell
     ];
   };
   programs.openvpn3.enable = true;

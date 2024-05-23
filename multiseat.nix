@@ -1,7 +1,7 @@
 { lib, ... }:
 
 let
-  isMultiseatEnabled = false;
+  isMultiseatEnabled = true;
 in
 
 {
@@ -9,5 +9,7 @@ in
     extraRules = builtins.readFile "/etc/nixos/seat.rules";
   };
   services.xserver.videoDrivers = ["nvidia"] ++ lib.optional isMultiseatEnabled "amdgpu";
+  # services.xserver.videoDrivers = ["nvidia" "amdgpu"];
+  # services.xserver.videoDrivers = ["amdgpu"];
 }
 

@@ -25,7 +25,7 @@ bindsym $mod+Print exec --no-startup-id maim --select $(xdotool getactivewindow)
 
 # remove window title bar
 default_border pixel 1
-default_floating_border pixel 1
+default_floating_border pixel 4 
 
 #keyboard lang
 exec "setxkbmap -layout us,lt"
@@ -130,7 +130,13 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
+#  
+# bindsym $mod+Shift+space floating toggle
 bindsym $mod+Shift+space floating toggle
+bindsym $mod+b exec alacritty 
+for_window [class="Steam"] floating enable
+for_window [class="Lutris"] floating enable
+for_window [class="Discord"] floating enable
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
