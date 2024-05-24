@@ -61,7 +61,7 @@
       steamtinkerlaunch
       ryujinx
       # yuzu-mainline
-      yuzu-early-access
+      # yuzu-early-access
       hplip
       wget
       gnupg1orig
@@ -89,6 +89,8 @@
       docker-compose
       jetbrains.pycharm-community
       gnomeExtensions.pop-shell
+      filezilla
+      putty
     ];
   };
   programs.openvpn3.enable = true;
@@ -135,4 +137,5 @@
       ntfs3g
     ];
   };
+
 }
